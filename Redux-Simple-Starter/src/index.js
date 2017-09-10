@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/searchbar';
+import VideoList from './components/videolist';
 import { createStore, applyMiddleware } from 'redux';
 import YTSearch from 'youtube-api-search';
 
@@ -19,6 +20,7 @@ class App extends Component {
         return ( 
             <div>
                 <SearchBar />
+                <VideoList videos={this.state.videos} />
             </div>
         );
     }
