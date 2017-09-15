@@ -1,4 +1,3 @@
-import Guid from 'guid';
 import React from 'react';
 
 const Button = ({text, onClick}) => {

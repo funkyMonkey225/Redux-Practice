@@ -1,4 +1,3 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import Counter from './Counter';
 import * as actions from '../actions';
@@ -19,6 +18,9 @@ const mapDispatchToProps = dispatch => ({
     },
     onAddCounter: (id) => {
         dispatch(actions.addCounter(id))
+    },
+    onRemoval: (id) => {
+        dispatch(actions.removeCounter(id));
     }
 })
 

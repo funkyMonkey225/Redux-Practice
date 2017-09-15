@@ -17,6 +17,11 @@ const counter = (state={}, action) => {
             newState = {...state};
             newState[action.id] = {id: action.id, count: action.count }
             return newState;
+        
+        case actions.REMOVE_COUNTER:
+            newState = {...state};
+            delete newState[action.id];
+            return newState;
 
         default:
             return state;

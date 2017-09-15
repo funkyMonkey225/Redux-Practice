@@ -9,7 +9,7 @@ import NumDisplay from './NumDisplay.js';
 //     onClick: actions.decrement}
 // ]
 
-const CounterList = ({counters, onIncrement, onDecrement, onAddCounter}) => {
+const CounterList = ({counters, onIncrement, onDecrement, onAddCounter, onRemoval}) => {
     return (
         <div>
             <Button text="Add Counter" onClick={onAddCounter} id={0} />
@@ -26,6 +26,10 @@ const CounterList = ({counters, onIncrement, onDecrement, onAddCounter}) => {
                         e.preventDefault();
                         onIncrement(counterid);
                         }}
+                    onRemoval = {(e) => {
+                        e.preventDefault();
+                        onRemoval(counterid);
+                    }}
                     />
             )})
         }
@@ -33,11 +37,12 @@ const CounterList = ({counters, onIncrement, onDecrement, onAddCounter}) => {
     );
 }
 
-const Counter = ({count, onIncrement, onDecrement}) => (
+const Counter = ({count, onIncrement, onDecrement, onRemoval}) => (
     <div>
         <NumDisplay count={count} />
         <Button text="+" onClick={onIncrement} />
         <Button text="-" onClick={onDecrement} />
+        <Button text="x" onClick={onRemoval} />
     </div>
 )
 
