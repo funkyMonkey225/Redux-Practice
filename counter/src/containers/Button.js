@@ -1,6 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import * as actions from '../actions.js';
 
+const BUTTONS = [
+    {text: '+',
+    onClick: actions.increment},
+    {text: '-',
+    onClick: actions.decrement}
+]
 
 const Button = ({id, text, onClick}) => {
     return (
