@@ -1,7 +1,7 @@
 import * as actions from './actions';
 import {combineReducers} from 'redux';
 
-const counter_change = (state=0, action) => {
+const counter= (state=0, action) => {
     switch(action.type) {
         case actions.INCREMENT:
             let newState = state + 1;
@@ -17,5 +17,5 @@ const counter_change = (state=0, action) => {
 }
 
 export default combineReducers({
-    counter_change
+    counter
 })

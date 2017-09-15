@@ -2,31 +2,17 @@ import React from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions.js';
 
-const BUTTONS = [
-    {text: '+',
-    onClick: actions.increment},
-    {text: '-',
-    onClick: actions.decrement}
-]
-
-const Button = ({id, text, onClick}) => {
+const Button = ({text, onClick}) => {
     return (
         <button 
-            id={id} 
+            key={text} 
             onClick={e => {
                 e.preventDefault(); 
-                onClick(id)}}>
+                onClick();
+                }}>
             {text}
         </button>
     );
 };
-
-const mapStateToProps = state => ({
-
-});
-
-const mapDispatchToProps = dispatch => ({
-
-});
 
 export default Button;
