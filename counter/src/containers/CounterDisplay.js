@@ -6,16 +6,19 @@ import * as actions from '../actions';
 
 const mapStateToProps = state => {
     return {
-    counter: state.counter
+    counters: state.counter
     }
 };
 
 const mapDispatchToProps = dispatch => ({
-    onIncrement: () => {
-        dispatch(actions.increment())
+    onIncrement: (id) => {
+        dispatch(actions.increment(id))
     },
-    onDecrement: () => {
-        dispatch(actions.decrement())
+    onDecrement: (id) => {
+        dispatch(actions.decrement(id))
+    },
+    onAddCounter: (id) => {
+        dispatch(actions.addCounter(id))
     }
 })
 

@@ -1,6 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import * as actions from '../actions.js';
 import Button from './Button.js';
 import NumDisplay from './NumDisplay.js';
 
@@ -11,12 +9,36 @@ import NumDisplay from './NumDisplay.js';
 //     onClick: actions.decrement}
 // ]
 
-const Counter = ({counter, onIncrement, onDecrement}) => (
+const CounterList = ({counters, onIncrement, onDecrement, onAddCounter}) => {
+    return (
+        <div>
+            <Button text="Add Counter" onClick={onAddCounter} id={0} />
+            { Object.keys(counters).map(counterid => {
+                return (
+                <Counter
+                    key={counterid}
+                    count={counters[counterid].count}
+                    onDecrement={(e) => {
+                        e.preventDefault();
+                        onDecrement(counterid)
+                        }}
+                    onIncrement={(e) => {
+                        e.preventDefault();
+                        onIncrement(counterid);
+                        }}
+                    />
+            )})
+        }
+        </div>
+    );
+}
+
+const Counter = ({count, onIncrement, onDecrement}) => (
     <div>
-        <NumDisplay counter={counter}/>
+        <NumDisplay count={count} />
         <Button text="+" onClick={onIncrement} />
         <Button text="-" onClick={onDecrement} />
     </div>
 )
 
-export default Counter;
+export default CounterList;

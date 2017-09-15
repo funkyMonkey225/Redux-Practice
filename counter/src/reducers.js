@@ -1,16 +1,23 @@
 import * as actions from './actions';
 import {combineReducers} from 'redux';
 
-const counter= (state=0, action) => {
+const counter = (state={}, action) => {
     switch(action.type) {
         case actions.INCREMENT:
-            let newState = state + 1;
+            let newState = {...state};
+            newState[action.id].count += 1;
             return newState;
 
         case actions.DECREMENT:
-            newState = state - 1;
+            newState = {...state};
+            newState[action.id].count -= 1;
             return newState;
-        
+
+        case actions.ADD_COUNTER:
+            newState = {...state};
+            newState[action.id] = {id: action.id, count: action.count }
+            return newState;
+
         default:
             return state;
     }

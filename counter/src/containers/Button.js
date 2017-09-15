@@ -1,15 +1,9 @@
+import Guid from 'guid';
 import React from 'react';
-import {connect} from 'react-redux';
-import * as actions from '../actions.js';
 
 const Button = ({text, onClick}) => {
     return (
-        <button 
-            key={text} 
-            onClick={e => {
-                e.preventDefault(); 
-                onClick();
-                }}>
+        <button onClick={onClick}>
             {text}
         </button>
     );

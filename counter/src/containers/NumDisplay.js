@@ -1,10 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-const CounterDisplay = ({counter}) => {
+const NumDisplay = ({count}) => {
     return (
-        <h1>{counter}</h1>
+        <h1>{count}</h1>
     )
 }
 
-export default CounterDisplay;
+export default NumDisplay;
