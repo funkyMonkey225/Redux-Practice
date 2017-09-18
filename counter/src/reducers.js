@@ -29,8 +29,19 @@ const counter = (state={}, action) => {
     }
 }
 
+const marta = (state=[], action) => {
+    switch(action.type) {
+        case 'MARTA':
+            debugger;
+
+        default:
+            return state;
+    }
+}
+
 const rootReducer = combineReducers({
-    counter
+    counter,
+    marta
 })
 
-export default undoable(rootReducer, {filter: distinctState()})
+export default rootReducer;
