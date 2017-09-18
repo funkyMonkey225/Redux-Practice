@@ -33,4 +33,4 @@ const rootReducer = combineReducers({
     counter
 })
 
-export default undoable(rootReducer, {filter: distinctState()});
+export default undoable(rootReducer, {filter: distinctState()})
