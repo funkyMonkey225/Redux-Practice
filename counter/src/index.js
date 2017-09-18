@@ -5,10 +5,11 @@ import registerServiceWorker from './registerServiceWorker';
 import CounterContainer from './containers/CounterDisplay';
 import {Provider} from 'react-redux';
 import rootReducer from './reducers';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import UndoRedoContainer from './containers/UndoRedoContainer.js';
+import reduxPromise from 'redux-promise';
 
-const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(rootReducer, applyMiddleware(reduxPromise), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 window.store = store;
 
