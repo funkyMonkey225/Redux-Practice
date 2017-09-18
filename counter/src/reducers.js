@@ -32,7 +32,7 @@ const counter = (state={}, action) => {
 const marta = (state=[], action) => {
     switch(action.type) {
         case actions.FETCH_MARTA:
-            debugger;
+            return action.payload.data;
 
         default:
             return state;

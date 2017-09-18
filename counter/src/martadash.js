@@ -8,6 +8,10 @@ class MartaDash extends Component {
             <button onClick={this.props.handleClick}>
                 Click me!
             </button>
+            {this.props.state.map((item, idx) => {
+                return (<p key={idx}>{item.DESTINATION}</p>)
+            })}
+
         </div>
     );
     }

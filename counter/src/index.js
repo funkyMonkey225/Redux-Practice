@@ -11,7 +11,10 @@ import * as actions from './actions';
 import reduxPromise from 'redux-promise';
 import MartaContainer from './martacontainer';
 
-const store = createStore(rootReducer, applyMiddleware(reduxPromise), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+// const store = createStore(rootReducer, applyMiddleware(reduxPromise), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+const createAsyncStore = applyMiddleware(reduxPromise)(createStore);
+const store = createAsyncStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 window.store = store;
 window.fetchData = actions.fetchData;
