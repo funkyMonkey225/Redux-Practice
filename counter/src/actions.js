@@ -1,9 +1,25 @@
 import Guid from 'guid';
+import axios from 'axios';
 
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 export const ADD_COUNTER = 'ADD_COUNTER';
 export const REMOVE_COUNTER = 'REMOVE_COUNTER';
+
+const MARTA_URL='http://developer.itsmarta.com/RealtimeTrain/RestServiceNextTrain/GetRealtimeArrivals?apikey=2c514350-0c26-47dd-b872-7936af81c8e1';
+
+export const FETCH_MARTA = 'FETCH_MARTA';
+
+export const fetchData = () => {
+    // return axios.get(MARTA_URL);
+    //     .then(response => {
+
+    //     });
+    // return {
+    //     type: 'MARTA',
+    //     payload: request
+    // }
+}
 
 export const increment = (id) => {
     return {type: INCREMENT, id}

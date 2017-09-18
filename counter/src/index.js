@@ -7,13 +7,13 @@ import {Provider} from 'react-redux';
 import rootReducer from './reducers';
 import {createStore, applyMiddleware} from 'redux';
 import UndoRedoContainer from './containers/UndoRedoContainer.js';
+import * as actions from './actions';
 import reduxPromise from 'redux-promise';
-import fetchMartaData from './FetchMarta';
 
 const store = createStore(rootReducer, applyMiddleware(reduxPromise), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 window.store = store;
-window.fetchMartaData = fetchMartaData;
+window.fetchData = actions.fetchData;
 
 ReactDOM.render(
     <Provider store={store}>
