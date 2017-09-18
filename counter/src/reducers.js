@@ -31,7 +31,7 @@ const counter = (state={}, action) => {
 
 const marta = (state=[], action) => {
     switch(action.type) {
-        case 'MARTA':
+        case actions.FETCH_MARTA:
             debugger;
 
         default:

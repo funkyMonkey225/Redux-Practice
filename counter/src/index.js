@@ -9,6 +9,7 @@ import {createStore, applyMiddleware} from 'redux';
 import UndoRedoContainer from './containers/UndoRedoContainer.js';
 import * as actions from './actions';
 import reduxPromise from 'redux-promise';
+import MartaContainer from './martacontainer';
 
 const store = createStore(rootReducer, applyMiddleware(reduxPromise), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
@@ -19,6 +20,7 @@ ReactDOM.render(
     <Provider store={store}>
         <div> 
             {/*<UndoRedoContainer />*/}
+            <MartaContainer />
             <CounterContainer />
         </div>
     </Provider>, document.getElementById('root'));

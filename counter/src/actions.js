@@ -11,14 +11,11 @@ const MARTA_URL='http://developer.itsmarta.com/RealtimeTrain/RestServiceNextTrai
 export const FETCH_MARTA = 'FETCH_MARTA';
 
 export const fetchData = () => {
-    // return axios.get(MARTA_URL);
-    //     .then(response => {
-
-    //     });
-    // return {
-    //     type: 'MARTA',
-    //     payload: request
-    // }
+    const request = axios.get(MARTA_URL);
+    return {
+        type: FETCH_MARTA,
+        payload: request
+    }
 }
 
 export const increment = (id) => {
