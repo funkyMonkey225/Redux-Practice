@@ -4,8 +4,8 @@ import UndoRedo from './UndoRedo.js';
 
 const mapStateToProps = state => {
     return {
-        canUndo: state.counter.past.length > 0,
-        canRedo: state.counter.future.length > 0
+        canUndo: state.past.length > 0,
+        canRedo: state.future.length > 0
     }
 }
 
