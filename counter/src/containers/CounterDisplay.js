@@ -5,7 +5,7 @@ import * as actions from '../actions';
 
 const mapStateToProps = state => {
     return {
-    counters: state.counter
+    counters: state.counter.present
     }
 };
 
