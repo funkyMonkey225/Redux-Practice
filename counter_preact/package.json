@@ -28,6 +28,8 @@
     "fs-extra": "3.0.1",
     "guid": "0.0.12",
     "html-webpack-plugin": "2.29.0",
+    "inferno": "^3.9.0",
+    "inferno-compat": "^3.9.0",
     "jest": "20.0.4",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
