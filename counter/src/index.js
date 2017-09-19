@@ -10,7 +10,7 @@ import {createStore, applyMiddleware} from 'redux';
 import UndoRedoContainer from './containers/UndoRedoContainer.js';
 import * as actions from './actions';
 import reduxPromise from 'redux-promise';
-import MartaContainer from './martacontainer';
+import MartaApp from './MartaApp';
 
 // const store = createStore(rootReducer, applyMiddleware(reduxPromise), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
@@ -27,10 +27,11 @@ ReactDOM.render(
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/counter">Count!</Link></li>
-                    <li><Link to="/marta/:filter">Martaah</Link></li>
+                    <li><Link to="/marta">Martaah</Link></li>
                 </ul>
                 <Route path="/counter" component={CounterContainer} />
-                <Route path="/marta/:filter" component={MartaContainer} />
+                <Route path="/marta/:filter" component={MartaApp} />
+                <Route exact path="/marta" component={MartaApp} />
                 {/*<MartaContainer />*/}
                 {/*<CounterContainer />*/}
                 {/*<UndoRedoContainer />*/}
