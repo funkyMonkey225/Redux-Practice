@@ -3,7 +3,7 @@ import MartaDash from './martadash';
 import * as actions from './actions';
 
 const mapStateToProps = (state, ownProps) =>({
-    state: state.marta,
+    marta: state.marta,
     filter: ownProps.filter
 });
 
