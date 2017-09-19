@@ -2,8 +2,9 @@ import {connect} from 'react-redux';
 import MartaDash from './martadash';
 import * as actions from './actions';
 
-const mapStateToProps = state =>({
-    state: state.marta
+const mapStateToProps = (state, ownProps) =>({
+    state: state.marta,
+    filter: ownProps.filter
 });
 
 const mapDispatchToProps = dispatch => ({
