@@ -1,5 +1,6 @@
 import * as actions from './actions';
 import {combineReducers} from 'redux';
+import undoable, {distinctState} from 'redux-undo';
 
 const counter = (state={}, action) => {
     switch(action.type) {
@@ -28,6 +29,19 @@ const counter = (state={}, action) => {
     }
 }
 
-export default combineReducers({
-    counter
+const marta = (state=[], action) => {
+    switch(action.type) {
+        case actions.FETCH_MARTA:
+            return action.payload.data;
+
+        default:
+            return state;
+    }
+}
+
+const rootReducer = combineReducers({
+    counter,
+    marta
 })
+
+export default rootReducer;
