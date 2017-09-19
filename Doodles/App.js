@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import MartaDash from 'MartaDash';
+import MartaDash from './MartaDash';
 
 export default class App extends React.Component {
   render() {
