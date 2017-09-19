@@ -1,16 +1,16 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import MartaDash from 'MartaDash';
 
 export default class App extends React.Component {
   render() {
-    let pic = {
-        uri: 'http://www4.pictures.zimbio.com/mp/26-j9dYPwm_l.jpg'
-    };
+    
     return (
       <View style={styles.container}>
         <Text>Cheese!</Text>
-        <Image source={{uri: 'http://www4.pictures.zimbio.com/mp/26-j9dYPwm_l.jpg'}} 
-        style={{width: 193, height: 110}} />
+        <Image source={{uri: 'https://placekitten.com/193/193'}} 
+        style={{width: 193, height: 193}} />
+        <MartaDash/>
       </View>
     );
   }
