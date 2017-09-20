@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ScrollView, Text, Button} from 'react-native';
+import {ScrollView, StyleSheet, Text, Button} from 'react-native';
 import axios from 'axios';
 
 const MARTA_URL='http://developer.itsmarta.com/RealtimeTrain/RestServiceNextTrain/GetRealtimeArrivals?apikey=2c514350-0c26-47dd-b872-7936af81c8e1';
@@ -7,6 +7,12 @@ const MARTA_URL='http://developer.itsmarta.com/RealtimeTrain/RestServiceNextTrai
 const fetchData = () => {
     return axios.get(MARTA_URL)
 }
+
+const styles = StyleSheet.create({
+    martaContainer: {
+        height: 40
+    }
+})
 
 export default class MartaDash extends Component {
     constructor(props) {
