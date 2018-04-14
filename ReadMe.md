@@ -1,1 +1,1 @@
-Practicing simple programs with React/Redux
+Practicing React/Redux
