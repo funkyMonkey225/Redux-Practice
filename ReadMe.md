@@ -1,1 +1,0 @@
-Practicing React/Redux
