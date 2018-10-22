@@ -30,6 +30,7 @@
     "lodash": "^4.17.10",
     "method-override": "^3.0.0",
     "moment": "^2.22.0",
+    "negotiator": "^0.6.1",
     "node-mime": "^1.0.0",
     "randomatic": "^3.1.0",
     "react": "16.0.0-alpha.12",
