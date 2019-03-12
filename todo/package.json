@@ -14,7 +14,7 @@
     "mime": "^2.3.1",
     "node-mime": "^1.0.0",
     "prop-types": "^15.5.10",
-    "randomatic": "^3.1.0",
+    "randomatic": "^3.1.1",
     "react": "^15.6.1",
     "react-dev-utils": "^8.0.0",
     "react-dom": "^15.6.1",
